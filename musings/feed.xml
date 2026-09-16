@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+  <title>HowTheFox — musings</title>
+  <link>https://howthefox.com/musings/</link>
+  <description>Short essays and stray thoughts from Elliott Fox.</description>
+  <item>
+    <title>Starting something small</title>
+    <link>https://howthefox.com/musings/starting-something-small/</link>
+    <guid>https://howthefox.com/musings/starting-something-small/</guid>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+    <description>On finally giving this corner of the site somewhere to exist.</description>
+  </item>
+</channel></rss>

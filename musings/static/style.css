@@ -1,0 +1,213 @@
+/* HowTheFox — musings
+   Minimal, warm, text-first. One stylesheet, no build step, no framework. */
+
+:root {
+  --bg: #faf6f0;
+  --text: #2b2420;
+  --muted: #8a7c6e;
+  --accent: #c9622a;
+  --accent-dark: #a04e20;
+  --border: #e8ddce;
+  --max-width: 640px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Charter, "Iowan Old Style", "Palatino Linotype", Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+
+header.site-header {
+  padding: 48px 0 28px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.brand svg { width: 26px; height: 26px; flex-shrink: 0; }
+
+.brand-name {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.brand-name .tagline {
+  font-weight: 400;
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+nav.site-nav {
+  margin-top: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+}
+
+nav.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-right: 18px;
+}
+
+nav.site-nav a:hover { color: var(--accent-dark); }
+
+/* Post list (index) */
+
+.post-list { list-style: none; margin: 0; padding: 0; }
+
+.post-list li {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-list li:first-child { padding-top: 0; }
+
+.post-list h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.post-list h2 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.post-list h2 a:hover { color: var(--accent-dark); }
+
+.post-list .summary {
+  margin: 0 0 8px;
+  color: #4a4038;
+}
+
+.post-meta {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.empty-note {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Single post */
+
+article.post h1 {
+  font-size: 32px;
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+
+article.post .post-meta { margin-bottom: 34px; }
+
+article.post .content p { margin: 0 0 20px; }
+
+article.post .content h2 {
+  font-size: 23px;
+  margin: 36px 0 14px;
+}
+
+article.post .content h3 {
+  font-size: 19px;
+  margin: 28px 0 12px;
+}
+
+article.post .content blockquote {
+  margin: 24px 0;
+  padding-left: 18px;
+  border-left: 3px solid var(--accent);
+  color: #4a4038;
+}
+
+article.post .content a { color: var(--accent-dark); }
+
+article.post .content img { max-width: 100%; height: auto; }
+
+article.post .content ul,
+article.post .content ol { padding-left: 24px; }
+
+article.post .content code {
+  background: #f0e8dc;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+article.post .content pre {
+  background: #221c17;
+  color: #f2ece2;
+  padding: 16px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+article.post .content pre code { background: none; padding: 0; }
+
+article.post .content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 32px 0;
+}
+
+.post-footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+}
+
+.post-footer a { color: var(--accent-dark); text-decoration: none; }
+.post-footer a:hover { text-decoration: underline; }
+
+/* Footer */
+
+footer.site-footer {
+  margin: 64px 0 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+footer.site-footer a { color: var(--muted); }
+
+@media (max-width: 480px) {
+  body { font-size: 18px; }
+  article.post h1 { font-size: 27px; }
+  .wrap { padding: 0 18px; }
+  header.site-header { padding: 34px 0 22px; margin-bottom: 30px; }
+}
